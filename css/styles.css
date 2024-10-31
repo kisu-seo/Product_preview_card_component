@@ -155,5 +155,20 @@ main {
 }
 
 .category {
+    text-transform: uppercase;
     font-size: 12px;
+    letter-spacing: 5px;
+}
+
+.product_name {
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 100%;
+    margin: 10px 0;
+    color: black
+}
+
+.product {
+    margin-bottom: 20px;
 }
