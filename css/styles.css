@@ -118,57 +118,215 @@ meter {
     display: none;
 }
 
+/* Global Styles */
 html {
+    /* Set the global font family and size */
     font-family: 'Montserrat', serif;
     font-size: 14px;
+    /* Set the global text color and line height */
     color: hsl(228, 12%, 48%);
     line-height: 150%;
 }
 
 body {
+    /* Center the content vertically and horizontally */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* Set the height and width to cover the viewport */
     height: 100vh;
+    width: 100vw;
+    /* Set the background color */
     background-color: hsl(30, 30%, 92%);
 }
 
+/* Container Styles */
 .container {
+    /* Center the content vertically and horizontally */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 327px;
+    /* Set the maximum width and add a white background */
+    max-width: 375px;
     background-color: white;
+    /* Add a border radius for rounded corners */
     border-radius: 10px;
+    /* Hide any overflow */
     overflow: hidden;
 }
 
-.container img {
-    display: flex;
+/* Image Styles */
+.img-product {
+    /* Set the width and height to cover the container */
+    width: 100%;
+    height: 100%;
+    /* Use cover to scale the image to cover the container */
     object-fit: cover;
 }
 
+/* Main Section Styles */
 main {
+    /* Add padding to the main section */
     padding: 20px;
 }
 
+/* Category Styles */
 .category {
+    /* Make the text uppercase and add letter spacing */
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 0.875rem;
     letter-spacing: 5px;
 }
 
+/* Product Name Styles */
 .product_name {
+    /* Set the font family, size, and weight */
     font-family: 'Fraunces', serif;
-    font-size: 32px;
+    font-size: 2.3rem;
     font-weight: 700;
+    /* Set the line height and margin */
     line-height: 100%;
     margin: 10px 0;
+    /* Set the color to black */
     color: black;
 }
 
+/* Introduction Styles */
+.introduce {
+    /* Set the font size */
+    font-size: 1rem;
+}
+
+/* Product Styles */
 .product {
+    /* Add margin bottom */
     margin-bottom: 20px;
+}
+
+/* Price Styles */
+.price {
+    /* Display flex for horizontal alignment */
+    display: flex;
+    /* Add margin bottom */
+    margin-bottom: 20px;
+}
+
+/* Discounted Price Styles */
+.discounted-price {
+    /* Set the font family, size, and weight */
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    font-weight: 700;
+    /* Set the color and margin right */
+    color: hsl(158, 36%, 37%);
+    margin-right: 20px;
+}
+
+/* Original Price Styles */
+.original-price {
+    /* Strike through the original price */
+    text-decoration: line-through;
+}
+
+/* Cart Styles */
+.cart {
+    /* Center the content horizontally and vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Set the background color and padding */
+    background-color: hsl(158, 36%, 37%);
+    padding: 15px;
+    /* Add a border radius for rounded corners */
+    border-radius: 10px;
+}
+
+/* Cart Icon Styles */
+.cart-icon {
+    /* Add margin right */
+    margin-right: 20px;
+}
+
+/* Cart Text Styles */
+.cart-text {
+    /* Set the color to white and font weight */
+    color: white;
+    font-weight: 700;
+}
+
+/* Attribution Styles */
+.attribution {
+    /* Add margin top and set the font size */
+    margin-top: 20px;
+    font-size: 11px;
+    /* Center the text */
+    text-align: center;
+}
+
+/* Attribution Span Styles */
+.attribution span {
+    /* Display block for each span */
+    display: block;
+}
+
+/* Media Query for Large Screens */
+@media (min-width: 1440px) {
+
+    /* Container Styles for Large Screens */
+    .container {
+        /* Change display to grid for large screens */
+        display: grid;
+        /* Set the grid template columns */
+        grid-template-columns: 1fr 1fr;
+        /* Set the maximum width and height */
+        max-width: 600px;
+        height: 450px;
+    }
+
+    /* Image Styles for Large Screens */
+    .img-product {
+        /* Ensure the image covers the container */
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    /* Main Section Styles for Large Screens */
+    main {
+        /* Adjust padding for large screens */
+        padding: 0 30px;
+    }
+
+    /* Product Name Styles for Large Screens */
+    .product_name {
+        /* Adjust margin for large screens */
+        margin: 20px 0;
+    }
+
+    /* Introduction Styles for Large Screens */
+    .introduce {
+        /* Adjust line height and margin bottom for large screens */
+        line-height: 170%;
+        margin-bottom: 30px;
+    }
+
+    /* Price Styles for Large Screens */
+    .price {
+        /* Adjust margin bottom for large screens */
+        margin-bottom: 30px;
+    }
+
+    /* Attribution Span Styles for Large Screens */
+    .attribution span {
+        /* Display inline for large screens */
+        display: inline;
+    }
+
+    /* Challenge Styles for Large Screens */
+    .challenge {
+        /* Add margin right for large screens */
+        margin-right: 10px;
+    }
 }

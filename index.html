@@ -17,7 +17,6 @@
     rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
   <title>Frontend Mentor | Product preview card component</title>
-
 </head>
 
 <body>
@@ -25,7 +24,11 @@
   <div class="container">
     <!-- Header section with product image -->
     <header>
-      <img src="./images/image-product-mobile.jpg" alt="Product Image for Mobile" class="img-mobile">
+      <picture>
+        <source srcset="./images/image-product-mobile.jpg" media="(max-width: 1440px)">
+        <source srcset="./images/image-product-desktop.jpg" media="(min-width: 1440px)">
+        <img src="./images/image-product-mobile.jpg" alt="Product Image for Mobile" class="img-product">
+      </picture>
     </header>
     <!-- Main section for product details -->
     <main>
@@ -43,22 +46,26 @@
       </section>
       <!-- Section for product pricing -->
       <section class="price">
-        <!-- Original price -->
-        $169.99
         <!-- Discounted price -->
-        $149.99
+        <p class="discounted-price">$149.99</p>
+        <!-- Original price -->
+        <p class="original-price">$169.99</p>
       </section>
       <!-- Section for call to action -->
-      <section>Add to Cart</section>
+      <section class="cart">
+        <img src="./images/icon-cart.svg" alt="Cart Icon" class="cart-icon">
+        <p class="cart-text">Add to Cart</p>
+      </section>
     </main>
   </div>
 
   <!-- Attribution section for credits -->
   <div class="attribution">
     <!-- Credit for the challenge -->
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    <span class="challenge">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
+        Mentor</a>.</span>
     <!-- Credit for the coder -->
-    Coded by <a href="#">Your Name Here</a>.
+    <span class="coder">Coded by <a href="https://github.com/kisu-seo">Danny Seo</a>.</span>
   </div>
 </body>
 
